@@ -3,7 +3,7 @@ import s from './MyPosts.module.css';
 import { Post } from "./Post/Post";
 
 export const MyPosts = () => {
-  debugger
+  
   return (
     <div>
       My posts
