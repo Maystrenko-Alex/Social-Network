@@ -1,0 +1,24 @@
+.dialogs {
+  display: inline-flex;
+}
+
+.dialogs_item {
+  padding: 15px; 
+}
+
+.dialogs_item .active {
+  color: gold;
+}
+
+.dialog a{
+  text-decoration: none;
+  /* color: white; */
+}
+
+.messages {
+  padding: 15px;
+}
+
+.message {
+
+}

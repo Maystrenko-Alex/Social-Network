@@ -2,11 +2,15 @@
 .nav {
   grid-area: n;
   background-color: burlywood;
+  padding: 15px;
+}
+
+.item {
   padding-top: 15px;
+  font-size: 22px;
 }
 
 .item a {
   color: white;
   text-decoration: none;
-  padding: 15px;
 }
