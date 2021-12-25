@@ -7,7 +7,7 @@ export const Post = (props) => {
       <img src='http://i.imgur.com/HU0OB.jpg' alt='ava' />
       {props.message}
       <div>
-        <span>like {props.likeCount}</span>
+        <span>like {props.likesCount}</span>
       </div>
     </div>
   );

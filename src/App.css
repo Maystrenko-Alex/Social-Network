@@ -10,3 +10,7 @@
   border: 3px solid rgb(66, 66, 42);
   
 }
+.app-wrapper-content {
+  grid-area: c;
+  background-color: cornflowerblue;
+}
