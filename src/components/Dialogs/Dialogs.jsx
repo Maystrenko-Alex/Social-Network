@@ -7,37 +7,36 @@ export const Dialogs = () => {
   return (
     <div className={s.dialogs}>
       <div className={s.dialogs_item}>
-        <div className={s.dialog + ' ' + s.active}>
-          <NavLink 
-            to={'/dialogs/Dimych'}
-            style={({isActive}) => ({ color: isActive ? "gold" : "white"  })}>
-          Dimych
-          </NavLink>
-        </div>
-        <div className={s.dialog}>
-        <NavLink 
-          to={'/dialogs/Andrey'} 
-          style={({isActive}) => ({ color: isActive ? "gold" : "white"  })} >
-          Andrey</NavLink>
-        </div>
-        <div className={s.dialog}>
-          Sveta
-        </div>
-        <div className={s.dialog}>
-          Sasha
-        </div>
-        <div className={s.dialog}>
-          Viktor
-        </div>
-        <div className={s.dialog}>
-          Valera
-        </div>
+        <DialogItem name='Dimych' id='1' />
+        <DialogItem name='Andrey' id='2' />
+        <DialogItem name='Sveta' id='3' />
+        <DialogItem name='Sasha' id='4' />
+        <DialogItem name='Viktor' id='5' />
+        <DialogItem name='Valera' id='6' />
       </div>
       <div className={s.messages}>
-        <div className={s.message}>Hi</div>
-        <div className={s.message}>How is your it-kamasutra</div>
-        <div className={s.message}>Yo</div>
+        <Message message='Hi' />
+        <Message message='How is your it-kamasutra' />
+        <Message message='Yo' />
       </div>
     </div>
+  );
+}
+
+const DialogItem = (props) => {
+  let path = "/dialogs" + props.id;
+  return (
+    <div className={s.dialog + ' ' + s.active}>
+      <NavLink
+        to={path}
+        style={({ isActive }) => ({ color: isActive ? "gold" : "white" })}>{props.name}
+      </NavLink>
+    </div>
+  );
+}
+
+const Message = (props) => {
+  return (
+    <div className={s.message}>{props.message}</div>
   );
 }
