@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react'; 
+import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { Dialogs } from './components/Dialogs/Dialogs';
 import { Header } from './components/Header/Header';
@@ -11,19 +11,16 @@ import { Settings } from './components/Settings/Settings.jsx';
 
 
 const App = (props) => {
- 
+  debugger
   return (
     <BrowserRouter>
       <div className='app-wrapper'>
         <Header />
         <Navbar />
-        <div className='app-wrapper-content'> 
+        <div className='app-wrapper-content'>
           <Routes>
-            <Route path='/profile' element={<Profile postsData={props.postsData}/>} />
-            <Route 
-              path='/dialogs' 
-              element={<Dialogs dialogsData={props.dialogsData} messageData={props.messageData}/>} 
-            />
+            <Route path='/profile' element={<Profile state={props.state.profilePage} />} />
+            <Route path='/dialogs' element={<Dialogs state={props.state.dialogsPage} />} />
             <Route path='/news' element={<News />} />
             <Route path='/music' element={<Music />} />
             <Route path='/settings' element={<Settings />} />
