@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React from 'react'; 
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { Dialogs } from './components/Dialogs/Dialogs';
 import { Header } from './components/Header/Header';
@@ -10,24 +10,20 @@ import { Music } from './components/Music/Music.jsx';
 import { Settings } from './components/Settings/Settings.jsx';
 
 
-
-
-const App = () => {
+const App = (props) => {
+ 
   return (
     <BrowserRouter>
       <div className='app-wrapper'>
         <Header />
         <Navbar />
-        <div className='app-wrapper-content'>
+        <div className='app-wrapper-content'> 
           <Routes>
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/dialogs' element={<Dialogs />} />
-            {/* <Route path='dialogs/Dimych' element={<Dialogs />} />
-            <Route path='dialogs/Andrey/*' element={<Dialogs />} />
-            <Route path='dialogs/Sveta' element={<Dialogs />} />
-            <Route path='dialogs/Valera' element={<Dialogs />} />
-            <Route path='dialogs/Viktor' element={<Dialogs />} />
-            <Route path='dialogs/Sasha' element={<Dialogs />} /> */}
+            <Route path='/profile' element={<Profile postsData={props.postsData}/>} />
+            <Route 
+              path='/dialogs' 
+              element={<Dialogs dialogsData={props.dialogsData} messageData={props.messageData}/>} 
+            />
             <Route path='/news' element={<News />} />
             <Route path='/music' element={<Music />} />
             <Route path='/settings' element={<Settings />} />

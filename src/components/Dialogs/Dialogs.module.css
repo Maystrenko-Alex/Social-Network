@@ -9,16 +9,6 @@
 .dialogs_item .active {
   color: gold;
 }
-
-.dialog a{
-  text-decoration: none;
-  /* color: white; */
-}
-
 .messages {
   padding: 15px;
 }
-
-/* .message {
-
-} */
